@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -26,3 +27,21 @@ export default tseslint.config(
     },
   },
 )
+=======
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
+import pluginReact from "eslint-plugin-react";
+
+export default [
+  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
+];
+
+module.exports = {
+  extends: ["plugin:react/jsx-runtime"],
+};
+>>>>>>> 6790052 (Implementacion import de tambor y cambio de tipo de export)

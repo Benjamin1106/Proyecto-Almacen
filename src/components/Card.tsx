@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
 interface Props {
-    //Reemplazamos body porque cuando se pasa una propiedad a otra podemos
-    //'children'
-    //El String lo reemplazamos por ReactNode
+  //Reemplazamos body porque cuando se pasa una propiedad a otra podemos
+  //'children'
+  //El String lo reemplazamos por ReactNode
   children: ReactNode;
 }
 
-function Card(props: Props) {
+export function Card(props: Props) {
   const { children } = props;
   return (
     <div
@@ -35,4 +35,3 @@ export function CardBody(props: CardBodyProps) {
   );
 }
 
-export default Card;
